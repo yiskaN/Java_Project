@@ -1,5 +1,7 @@
 package com.example.sarah.javaproject.model.enteties;
 
+import java.util.Objects;
+
 enum STATUS
 {
     AVAILABLE, MOTION, DONE;
@@ -8,6 +10,22 @@ public class Trip
 {
 
     protected long id;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Trip trip = (Trip) o;
+        return placeBegin.equals(trip.getPlaceBegin())&&
+                destination.equals(trip.getDestination()) &&
+                costumerName.equals(trip.getCostumerName()) &&
+                costumerTel.equals(trip.getCostumerTel()) &&
+                costumerEmail.equals(trip.getCostumerEmail());
+    }
+
+
     protected STATUS status;
     protected String placeBegin;
     protected String destination;
@@ -137,7 +155,7 @@ public class Trip
     }
 
     public void toString(Trip trip){
-        System.out.println("begining place: "+placeBegin+", costumers name: "+costumerName+", costumers number: "+ costumerTel+"/n");
+        System.out.println("beginning place: "+placeBegin+", costumers name: "+costumerName+", costumers number: "+ costumerTel+"/n");
     }
 }
 

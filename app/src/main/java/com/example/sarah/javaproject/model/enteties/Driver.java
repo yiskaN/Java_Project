@@ -1,5 +1,7 @@
 package com.example.sarah.javaproject.model.enteties;
 
+import java.util.Objects;
+
 public class Driver
 {
     protected String familyName;
@@ -9,8 +11,11 @@ public class Driver
     protected String eMail;
     protected String creditCardDebit;
 
+
+
     public Driver()
     {
+
         this.familyName = "";
         this.name = "";
         this.id = 0;
@@ -93,8 +98,7 @@ public class Driver
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Driver driver = (Driver) o;
-        return id == driver.id &&
-                creditCardDebit == driver.creditCardDebit &&
+        return creditCardDebit == driver.creditCardDebit &&
                 familyName.equals(driver.familyName) &&
                 name.equals(driver.name) &&
                 phoneNumber.equals(driver.phoneNumber) &&

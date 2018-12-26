@@ -11,6 +11,7 @@ public class DatabaseList implements Backend
     ArrayList<Trip> trips = new ArrayList<Trip>();
     @Override
     public void addTrip(Trip trip) throws Exception {
+
         trip.setId(TripCounter++);
         for (Trip t: trips) {
             if (t.getId()==trip.getId())
