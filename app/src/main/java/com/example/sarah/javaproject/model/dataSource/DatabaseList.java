@@ -15,13 +15,13 @@ public class DatabaseList implements Backend
     ArrayList<Trip> trips = new ArrayList<Trip>();
     @Override
     public void addTrip(Trip trip) throws Exception {
-        if (isValidEmail("costumerEmail"))
+        if (!isValidEmail(trip.getCostumerEmail()))
             throw new Exception("your Email is invalid!");
-        if (isValidMobile("costumerTel"))
+        if (!isValidMobile(trip.getCostumerTel()))
             throw new Exception("your phone number is invalid!");
         trip.setId(TripCounter++);
         for (Trip t: trips) {
-            if (t.equals(trip))
+            if (trip.equals(t))
                 throw new Exception("this trip is already exists!");
         }
         trips.add(trip);
