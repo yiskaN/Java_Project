@@ -89,10 +89,16 @@ public class Driver
     }
 
     @Override
-    public String toString()
-    {
-        return "Driver: "+"name: "+name+", family name: "+familyName+",phone number: "+ phoneNumber+" ,Email address: "+eMail+"/n";
+    public String toString() {
+        return "Driver{" +
+                "familyName='" + familyName + '\'' +
+                ", name='" + name + '\'' +
+                ", id=" + id +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", eMail='" + eMail + '\'' +
+                '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

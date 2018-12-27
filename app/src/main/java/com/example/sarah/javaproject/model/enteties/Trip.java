@@ -11,20 +11,6 @@ public class Trip
 
     protected long id;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Trip trip = (Trip) o;
-        return placeBegin.equals(trip.getPlaceBegin())&&
-                destination.equals(trip.getDestination()) &&
-                costumerName.equals(trip.getCostumerName()) &&
-                costumerTel.equals(trip.getCostumerTel()) &&
-                costumerEmail.equals(trip.getCostumerEmail());
-    }
-
 
     protected STATUS status;
     protected String placeBegin;
@@ -154,8 +140,29 @@ public class Trip
         this.costumerEmail = costumerEmail;
     }
 
-    public void toString(Trip trip){
-        System.out.println("beginning place: "+placeBegin+", costumers name: "+costumerName+", costumers number: "+ costumerTel+"/n");
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Trip trip = (Trip) o;
+        return placeBegin.equals(trip.getPlaceBegin())&&
+                destination.equals(trip.getDestination()) &&
+                costumerName.equals(trip.getCostumerName()) &&
+                costumerTel.equals(trip.getCostumerTel()) &&
+                costumerEmail.equals(trip.getCostumerEmail());
+    }
+
+    @Override
+    public String toString() {
+        return "Trip{" +
+                "placeBegin='" + placeBegin + '\'' +
+                ", destination='" + destination + '\'' +
+                ", costumerName='" + costumerName + '\'' +
+                ", costumerTel='" + costumerTel + '\'' +
+                ", costumerEmail='" + costumerEmail + '\'' +
+                '}';
     }
 }
 
