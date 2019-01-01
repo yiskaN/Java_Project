@@ -38,7 +38,7 @@
                 android:layout_weight="12"
                 android:background="@color/colorWhite"
                 android:ems="10"
-                android:hint="Phon Namber"
+                android:hint="Phone Number"
                 android:inputType="phone" />
 
             <EditText

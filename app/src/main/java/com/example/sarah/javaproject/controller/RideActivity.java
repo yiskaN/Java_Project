@@ -75,7 +75,7 @@ public class RideActivity extends AppCompatActivity {
                         email.setText("");//clean input EditText
                         begin.setText("");//clean input EditText
                         end.setText("");//clean input EditText
-                        Toast.makeText(RideActivity.this, "Your order is being processed",
+                        Toast.makeText(RideActivity.this, "Your Ride was added successfully",
                                 Toast.LENGTH_LONG).show();//message to user
 
                 }
