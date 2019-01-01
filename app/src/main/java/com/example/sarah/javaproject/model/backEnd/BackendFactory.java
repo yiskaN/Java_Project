@@ -6,13 +6,13 @@ import com.example.sarah.javaproject.model.dataSource.DatabaseList;
 public final class BackendFactory {
     static Backend instance = null;
 
-     public static String mode ="lists";
+    public static String mode ="lists";
 
      public final static Backend getInstance(Context context) {
 
         if (mode == "lists") {
             if (instance == null)
-                instance = new DatabaseList();
+                instance = new com.example.sarah.javaproject.model.dataSource.DatabaseList();
             return instance;
         }
         if (mode == "fb") {

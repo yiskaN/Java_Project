@@ -63,7 +63,8 @@ public class RideActivity extends AppCompatActivity {
                                 }
                                 catch(Exception e)
                                 {
-                                    System.out.println(e.getMessage());
+                                    Toast.makeText(RideActivity.this, e.getMessage(),
+                                            Toast.LENGTH_LONG).show();
                                     return null;
                                 }
                             }
